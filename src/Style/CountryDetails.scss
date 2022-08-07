@@ -1,0 +1,168 @@
+@mixin purple {
+    font-size: 48px;
+    color: #8362F2;
+    font-weight: 600;
+}
+@mixin underline {
+    color: #8362F2;
+    text-decoration: underline;
+}
+
+.country-details-cont{
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+  .back-btn{
+    width: 169px;
+    background-color:#8362F2; 
+    display: flex;
+    padding: 10px 12px 12px 10px;
+    border-radius: 10px;
+    margin: 50px 0 20px 0px;
+    cursor: pointer;
+    svg{
+        margin-top: 3px;
+        margin-right: 10px;
+    }
+    p{
+        color: white;
+        margin-left: 5px;
+        font-weight: 400;
+    }
+  }
+  .name-details{
+    .nameflag{
+        display: flex;
+        h1{
+            font-size: 48px;
+        }
+        img{
+            margin-top: 20px;
+            margin-left: 10px;
+            width: 48px;
+            height: 36px;
+            
+        }
+    }
+    .more-details{
+        display: flex;
+        p{  margin-right: 10px;
+            color: white;
+            font-weight: 600;
+            background-color: #8DD5CC;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    }
+  }
+  .sub-region{
+    display: flex;
+    .latlong{
+        top: 20px;
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        max-width: 504px;
+        height: 150px;
+        box-shadow:0 0 4pt 2pt rgba(169, 169, 169, 0.155) ;
+        margin-right: 20px;
+        h6{
+            text-align: left;
+            font-size:18px ;
+            margin: 20px 0 15px 20px;
+            position: absolute;
+        }
+        img{
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            top: 20px;
+        }
+        .latlong-info{
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            span{
+                @include purple;
+            }
+        }
+    }
+    .CRS-section{
+        top: 20px;
+        overflow: hidden;
+        position: relative;
+        width: 45%;
+        max-width: 504px;
+        height: 150px;
+        box-shadow:0 0 4pt 2pt rgba(169, 169, 169, 0.155) ;
+        .first{
+            margin-top: 30px;
+        }
+        h6{
+            font-size: 18px;
+            text-align: left;
+            margin: 7px 0 0 20px;
+            font-weight: 400;
+        }
+    }
+  }
+  .callncurr-cont{
+    display: flex;
+  }
+  .calling-cont{
+    width: 50%;
+    text-align: left;
+    margin-top: 70px;
+    margin-right: 20px;
+    h6{
+        font-size: 20px;
+    }
+    h1{
+        @include purple;
+    }
+    span{
+        @include underline;
+        cursor: pointer;
+    }
+}
+.currency-cont{
+    width: 45%;
+    text-align: left;
+    margin-top: 70px;
+    h6{
+        font-size: 20px;
+    }
+    h1{
+        @include purple;
+    }
+    span{
+        @include underline;
+        cursor: pointer;
+    }
+}
+}
+.hidden{
+    display: none;
+}
+.other-cont{
+    width:200px ;
+    max-height: 110px;
+    outline: solid;
+    color: white;
+    background-color:#525252 ;
+    padding: 15px 15px 15px 20px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: none;
+    p{
+        margin-bottom: 5px;
+    }
+}
+
+.hover-sect:hover .other-cont{
+    display: block;
+}

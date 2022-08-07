@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{ useState,useEffect } from 'react'
+import './Style/App.scss';
+import useFetch from './Function/useFetch';
+import CountryDetails from './Component/CountryDetails';
+import CountrySearch from './Component/CountrySearch';
+
 
 function App() {
+  const [country,setCountry] = useState(null)
+  const [display,setDisplay] = useState(1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {display  == 1 && <CountrySearch setCountry={setCountry} setDisplay={setDisplay} />}
+      {display == 2 && <CountryDetails country={country} setDisplay={setDisplay} />}
     </div>
   );
 }
