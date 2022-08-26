@@ -28,6 +28,7 @@ function CountrySearch({setCountry,setDisplay}) {
         if(n<5){
           return(
             <div className='result' key="n" onClick={()=>clickCountry(i)}>
+              <img src={i.flags.svg} alt="" />
               <p>{i.name}</p>
             </div>
           )

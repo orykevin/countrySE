@@ -5,7 +5,7 @@ import "../Style/CountryDetails.scss"
 function CountryCalling({callcode}) {
     const [display,setDisplay] = useState(false)
     const{data,error,loading} = useFetch(`https://restcountries.com/v2/callingcode/${callcode}`)
-    if(data) console.log(data)
+    //if(data) console.log(data)
     const callMap = ()=>{
         if(data){
             return(

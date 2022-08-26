@@ -5,7 +5,7 @@ import "../Style/CountryDetails.scss"
 function CountryCurrency({currency}) {
 
   const{data,error,loading} = useFetch(`https://restcountries.com/v2/currency/${currency}`)
-    if(data) console.log(data)
+    //if(data) console.log(data)
     const callMap = ()=>{
         if(data){
             return(
@@ -21,7 +21,7 @@ function CountryCurrency({currency}) {
         <h1>{currency}</h1>
         <div className='hover-sect'>
         <p><span >{data ? data.length :""} countries</span> with this currency</p>
-        <div className='other-cont'>
+        <div className={`other-cont ${window.innerWidth <= 738 ? "other-mbl" : ""}`}>
             {callMap()}
         </div>
         </div>
