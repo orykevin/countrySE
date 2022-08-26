@@ -19,14 +19,22 @@
     text-align: center;
     @include media("<=tablet"){
       font-size: 48px;
-      margin-top: 50%
+      margin-top: 20%
   }
+  @include media("<=set1"){
+    font-size: 48px;
+    margin-top: 50%;
+    margin-bottom: 30px
+}
   }
   .search-box{
     @include center;
     max-width: 570px;
     width: 90%;
     position: relative;
+    @include media("<=tablet"){
+      max-width: 450px;
+    }   
     input{
       width: 88%;
       padding: 10px 50px 10px 15px;
